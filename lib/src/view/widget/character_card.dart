@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod_test/src/data/models/character.dart';
+import 'package:hooks_riverpod_test/src/view/widget/save_image.dart';
 
 import 'custom_card.dart';
 
@@ -14,7 +15,10 @@ class CharacterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomCard(
-      onTap: () {},
+      onTap: () => saveImage(
+        context,
+        character,
+      ),
       borderRadius: const BorderRadius.all(Radius.circular(10.0)),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
