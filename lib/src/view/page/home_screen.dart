@@ -21,6 +21,10 @@ class HomeScreen extends HookConsumerWidget {
       appBar: AppBar(
         title: const Text("Riverpod and Hooks"),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.refresh),
+      ),
       body: Center(
         child: connectivityStatusProvider == ConnectivityStatus.isConnected
             ? HookBuilder(
