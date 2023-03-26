@@ -8,25 +8,6 @@ class HomeViewModel extends ChangeNotifier {
   NetworkService service = NetworkService();
   List<Character> characters = [];
   APIRequestStatus requestStatus = APIRequestStatus.loading;
-
-  // Future getCharacters() async {
-  //   requestStatus = APIRequestStatus.loading;
-  //   notifyListeners();
-  //   try {
-  //     final responseBody = await service.getCharacters();
-  //     characters = responseBody;
-  //     requestStatus = APIRequestStatus.loaded;
-  //     notifyListeners();
-  //   } catch (e) {
-  //     if (isConnectionError(e)) {
-  //       requestStatus = APIRequestStatus.connectionError;
-  //       notifyListeners();
-  //     } else {
-  //       requestStatus = APIRequestStatus.error;
-  //       notifyListeners();
-  //     }
-  //   }
-  // }
 }
 
 enum APIRequestStatus {
