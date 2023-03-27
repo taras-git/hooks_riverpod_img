@@ -16,8 +16,7 @@ Future<void> saveImage(
   try {
     final response = await http.get(Uri.parse(character.url!));
     final dir = await getTemporaryDirectory();
-    final fileName = '${dir.path}/image.png';
-    final file = File(fileName);
+    final file = File('${dir.path}/image.png');
     await file.writeAsBytes(response.bodyBytes);
     final params = SaveFileDialogParams(sourceFilePath: file.path);
     final finalPath = await FlutterFileDialog.saveFile(params: params);

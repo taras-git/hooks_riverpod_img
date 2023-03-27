@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod_test/src/data/models/character.dart';
 import 'package:hooks_riverpod_test/src/view/widget/save_image.dart';
 
 import 'custom_card.dart';
 
-class CharacterCard extends StatelessWidget {
+class CharacterCard extends HookWidget {
   final Character character;
 
   const CharacterCard({
